@@ -11,7 +11,7 @@ export const Link = objectType({
 			resolve(parent, args, context) {
 				return context.prisma.link
 					.findUnique({ where: { id: parent.id } })
-					.User();
+					.postedBy();
 			},
 		});
 	},
@@ -50,7 +50,7 @@ export const LinkMutation = extendType({
 					data: {
 						description: description,
 						url: url,
-						User: { connect: { id: userId}},
+						postedBy: { connect: { id: userId } },
 					},
 				});
 
