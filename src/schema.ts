@@ -11,5 +11,5 @@ export const schema = makeSchema({
 	contextType: {
 		module: join(process.cwd(), "./src/context.ts"),
 		export: "Context",
-	}
+	},
 });
